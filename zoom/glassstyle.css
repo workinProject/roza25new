@@ -1,0 +1,7 @@
+#glass {
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    border: none !important
+}

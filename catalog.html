@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--LODASH-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <!--SLICK-->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!---->
+    <title>Catalog</title>
+</head>
+
+<body>
+    <!--СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ-->
+    <div class="special-offer text-white d-flex py-2">
+        <a href="#" class="special-offer__txt">
+            специальное предложение для корпоративных клиектов
+        </a>
+        <span class="special-offer__close" id="close"> &#215; </span>
+    </div>
+    <!--------------------------------->
+
+    <!--ХЕАДЕР-->
+    <div id="headerTop"></div>
+    <div id="headerBottom"></div>
+    <!---->
+
+    <main>
+
+        <div id="grid-holder"></div>
+
+        <script type="text/template" id="grid-template">
+            <div class="row container cardContainer">
+                    <% for(var i = 0; i < list.length; i++) { %>
+                    <div class="myCards col-xs-12 col-sm-6 col-md-6 col-lg-4 p-1 d-flex flex-column align-items-center mb-4">
+                        <div class="myContainer border">
+                            <a href="product.html" class="myCards__body d-flex flex-column align-items-center mt-3 ">
+                                <img src="<%=list[i].img%>" class="img-fluid imgW" alt="">
+                                <div class="flowers-name flowers-txt mt-2"><%=list[i].name%></div>
+                                <div class="flowers-price flowers-txt my-2"><%=list[i].price%> &#8381;</div>
+                            </a>
+        
+                            <div class="myCards__btn d-flex flex-column align-items-center">
+                                <button type="button" class="myBtn">Закачать</button>
+                                <a href="#" class="myLink mb-2">Купить в 1 клик</a>
+                            </div>
+                        </div>
+        
+                        <div class="feature " style="background-color: <%=list[i].color%>">
+                            <div class="feature__txt"><%=list[i].feature%></div>
+                        </div>
+        
+                        <div class="size">
+                            <div class="size__left">
+                                <p class="size__left--txt">
+                                    <%=list[i].sizeW%>
+                                </p>
+                            </div>
+    
+                            <div class="size__right">
+                                <p class="size__left--txt">
+                                    <%=list[i].sizeH%>
+                                </p>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <% } %>
+            </div>
+      </script>
+    </main>
+
+    <!--ФУТЕР-->
+    <div id="footer"></div>
+    <!---->
+
+    <!--JQUERY-->
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <!--BOOTSTRAP-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--SLICK-->
+    <script src="slick/slick.min.js"></script>
+    <!--TEMPLATE-->
+    <script src="js/template.js"></script>
+    <!--OBJECT-->
+    <script src="js/object.js"></script>
+    <!--MY SCRIPT-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

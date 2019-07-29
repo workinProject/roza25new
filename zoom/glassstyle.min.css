@@ -1,0 +1,6 @@
+#glass {
+    position: absolute;
+    display: none;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, .6)
+}
